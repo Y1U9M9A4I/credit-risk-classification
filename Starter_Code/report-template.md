@@ -4,22 +4,51 @@
 
 ## Overview of the Analysis
 
-In this section, describe the analysis you completed for the machine learning models used in this Challenge. This might include:
+In the current analysis, we create and utilize a Supervised Machine Learning Model for the processing of Crypto-Currency data. This Crypto currency contains data columns loan loan_size,interest_rate,borrower_income,debt_to_income,num_of_accounts,derogatory_marks,total_debt,loan_status. Our aim is to be able to use this model to predict whether an instance would likely be a healthy loan [Class 0] or high-risk loan [Class 1]. Our primary variables of interest included: 
+    
+    a. loan_size
+    b. interest_rate
+    c. borrower_income
+    d. debt_to_income
+    e. num_of_accounts
+    f. derogatory_marks
+    g. total_debt
+    h. loan_status
 
-* Explain the purpose of the analysis.
-* Explain what financial information the data was on, and what you needed to predict.
-* Provide basic information about the variables you were trying to predict (e.g., `value_counts`).
-* Describe the stages of the machine learning process you went through as part of this analysis.
-* Briefly touch on any methods you used (e.g., `LogisticRegression`, or any other algorithms).
+    Our model aims to utilize these parameters to predict whether an incoming account would tend towards being a healthy loan or a high-risk loan. 
 
-    In the current analysis, we create and utilize a Supervised Machine Learning Model for the processing of Crypto-Currency data. This Crypto currency contains data columns loan loan_size,interest_rate,borrower_income,debt_to_income,num_of_accounts,derogatory_marks,total_debt,loan_status. Our aim is to be able to use this model to predict whether an instance would likely be a healthy loan [Class 0] or high-risk loan [Class 1]. 
+    The data file supplied is in CSV format. 
+
+    Our model's machine learning process are as described below: 
+    a. Data splitting into Training and Testing Sets 
+    --> Read data split into labels and features, with the labels referring to the loan type (healthy vs. high-risk) and all other columns/variables as the features 
+    --> Data sets were 'split,' or separated into training versus testing datasets 
+
+    b. Creation of a Logistic Regression Model with the
+    Original Data 
+    --> Using the Sklearn package, we were able to create a Logistic Regression model
+    --> Binary Classifier ([0] vs [1] were the viable predictions)
+    --> Fitting of this model was completed by using the training data 
+    --> Predictions were made using this model by supplying the testing data
+
+    c. Evaluation and Summarization of the findings
 
 ## Results
 
 Using bulleted lists, describe the accuracy scores and the precision and recall scores of all machine learning models.
 
 * Machine Learning Model 1:
-    * Description of Model 1 Accuracy, Precision, and Recall scores.
+    * Description of Model Accuracy, Precision, and Recall scores.
+
+    *Accuracy: 0.99 (weighted average) indicates a correct prediction 99% of the times it makes a prediction using the given parameters 
+
+    *Precision:
+    [0] Healthy Loan: 1.00
+    [1] High-Risk Loan: 0.85
+
+    *Recall:
+    [0] Healthy Loan: 0.99
+    [1] High-Risk Loan: 0.91
 
 ## Summary
 
