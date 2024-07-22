@@ -35,8 +35,6 @@ In the current analysis, we create and utilize a Supervised Machine Learning Mod
 
 ## Results
 
-Using bulleted lists, describe the accuracy scores and the precision and recall scores of all machine learning models.
-
 * Machine Learning Model 1:
     * Description of Model Accuracy, Precision, and Recall scores.
 
@@ -59,20 +57,10 @@ Summarize the results of the machine learning models, and include a recommendati
 
 If you do not recommend any of the models, please justify your reasoning.
 
+Our model does a phenomenal job at predicting [0] Healthy Loans, with a precision of 100% and a recall of 99%. We see a step down in prediction precision to 85% when predicting [1] High-Risk Loans, and a drop in recall to 91%. This model presents promise in prediction of high-risk loans and proven accuracy in predicting healthy loans. 
 
-# CryptoClustering Assignment 
+Considering the weighted average in precision is 99% for the model as a whole, we should be suspicious of unequal datasets potentially contributing to these differences in precision numbers ([0] may have more data for which the algorithm can learn and predict). By calling on additional information for each [0] and [1] through a value_count, we can see that we have much more data for Healthy Loans [0] than High-Risk Loans [1], and this near 30x more data supplied for Healthy Loans may explain the prediction precision difference of this model for either loan statuses.
 
-Write a Credit Risk Analysis Report (20 points)
-To receive all points, you must:
-•	Provide an overview that explains the purpose of this analysis. (5 points)
-•	Using a bulleted list, describe the accuracy, precision, and recall scores of the machine learning model. (5 points)
-•	Summarize the results from the machine learning model. Include your justification for recommending the model for use by the company. If you don’t recommend the model, justify your reasoning. (10 points)
+In a sense of practical application, it would be much more critical to predict High Risk Loans (and proceed with more caution) versus identifying healthy loans. The practical applicability of this model would therefore be in the identification of loans to not approve [high risk loans, [1]]. 
 
-## Credit Risk Analysis Report ##
-
-
-### Analysis Overview ###
-
-### Machine Learning Model Review: Results ###
-
-### Results Summary ###
+Although the modeling accuracy for prediction of [1] is lower than for [0], it is still a reasonably accurate model. I would recommend the model for usage, but also heavily consider the necessary addition of more high-risk data data sets in order to improve the model for prediction of [1].
